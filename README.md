@@ -13,21 +13,3 @@ npx @preset/cli davipon/eslint-prettier-preset
 ```
 
 > This is not a template, but a preset to add integrations to your project.
-
-
-
-### ⚙️ Option
-
-Default use `npm` to install the packages.
-
-You can also specify the package manager to use:
-```bash
-# npm
-npx @preset/cli apply @davipon/eslint-prettier-preset --package=npm
-
-# yarn
-npx @preset/cli apply @davipon/eslint-prettier-preset --package=yarn
-
-#pnpm
-npx @preset/cli apply @davipon/eslint-prettier-preset --package=pnpm
-```

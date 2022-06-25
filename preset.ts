@@ -1,10 +1,5 @@
-import { NodePackageManager } from '@preset/core'
-
 export default definePreset({
   name: 'eslint-prettier-preset',
-  options: {
-    package: <NodePackageManager>'npm'
-  },
   postInstall: ({ hl }) => [
     `This preset has added/ updated ${hl('package.json')} & ${hl(
       '.husky'
@@ -21,7 +16,7 @@ export default definePreset({
       'lint-staged'
     )} (run eslint & prettier) will be triggered after every commit.`
   ],
-  handler: async (context) => {
+  handler: async () => {
     await extractTemplates({
       title: 'Extract config files',
 			extractDotFiles: true
@@ -40,7 +35,6 @@ export default definePreset({
         'prettier',
         'typescript'
       ],
-      packageManager: context.options.package,
       dev: true
     })
     await editFiles({
