@@ -1,10 +1,19 @@
 {
-	"private": true,
-	"author": "davipon <david19930304@gmail.com>",
-	"license": "MIT",
-	"preset": "preset.ts",
-	"devDependencies": {
-		"@preset/core": "^0.6.0",
-		"@types/node": "^18.0.0"
-	}
+  "private": true,
+  "name": "@davipon/eslint-prettier-preset",
+  "description": "Easily add my preset of ESLint & Prettier to a TS project.",
+  "author": "davipon <davipondev@gmail.com>",
+  "keywords": [
+    "eslint",
+    "prettier",
+    "preset"
+  ],
+	"repository": "https://github.com/davipon/eslint-prettier-preset",
+	"bugs": "https://github.com/davipon/eslint-prettier-preset/issues",
+  "license": "MIT",
+  "preset": "preset.ts",
+  "devDependencies": {
+    "@preset/core": "^0.6.0",
+    "@types/node": "^18.0.0"
+  }
 }
