@@ -7,7 +7,7 @@
 
 ```bash
 # In your TS project
-npx @preset/cli apply davipon/eslint-prettier-preset
+npx @preset/cli davipon/eslint-prettier-preset
 
 # If this is your first time using @preset/cli, you'd be asked to install it first.
 ```
