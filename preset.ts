@@ -22,6 +22,10 @@ export default definePreset({
     )} (run eslint & prettier) will be triggered after every commit.`
   ],
   handler: async (context) => {
+    await extractTemplates({
+      title: 'Extract config files',
+			extractDotFiles: true
+    })
     await installPackages({
       title: 'Installing packages',
       for: 'node',
@@ -63,10 +67,6 @@ export default definePreset({
       title: 'Add pre-commit git hook',
       command: 'npx',
       arguments: ['husky', 'add', '.husky/pre-commit', 'npx lint-staged']
-    })
-
-    await extractTemplates({
-      title: 'Extract config files'
     })
   }
 })
